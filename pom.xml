@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.tahopen</groupId>
+  <artifactId>tahopen-encryption-support</artifactId>
+  <version>0.1.0.0</version>
+
+  <parent>
+    <groupId>org.tahopen</groupId>
+    <artifactId>tahopen-ce-jar-parent-pom</artifactId>
+    <version>0.1.0.0</version>
+  </parent>
+
+  <properties>
+    <junit.version>4.11</junit.version>
+    <org.hamcrest.version>2.0.0.0</org.hamcrest.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-util</artifactId>
+      <version>${jetty.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>*</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- Test dependencies -->
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>java-hamcrest</artifactId>
+      <version>${org.hamcrest.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
